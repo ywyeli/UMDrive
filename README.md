@@ -5,12 +5,12 @@ Robust and reliable Simultaneous Localization and Mapping (SLAM) systems are cru
 - We propose a novel assessment metric based on frame drop rates to identify the most reliable SLAM systems.
 - Centered around the theme of robust and reliable SLAM, we establish a systematic data generation platform in CALRA to synthesize RGB data under diverse conditions. Extensive experiments demonstrate that our framework can evaluate and optimize the performance of SLAM systems.
 ## CARLA Synthetic Dataset Generation Guide
-## Preparation
+### Preparation
 Download [CARLA v0.9.10](https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.10.tar.gz) and unzip it under `./carla`. Follow the install instruction of `scenario_runner` of commit [ad71a2c](https://github.com/carla-simulator/scenario_runner/tree/ad71a2c7ed012d735be2b1158fca51b0761ff26b).
 
 We test our repo with on Ubuntu 18.04 or 20.04.
 
-## Data Collection
+### Data Collection
 
 Turn on CARLA as default and then run the following shell script. 
 
@@ -30,12 +30,3 @@ Run the following code to create NuScenes-formatted labels.
 
 Copy the folder `./NuScenes_generate/maps`, `./NuScenes_generate/v1.0-trainval` and `./NuScenes_generate/v1.0-test` to your dataset root. Replace the file `splits.py` in the NuScenes-devkit on your environment with our `./NuScenes_generate/splits.py`, otherwise the NuScenes-devkit can not recognize our dataset.
 
-## Unified Surrogate Metric
-
-The 3d bounding boxes of all 3d objects can be accessed at `./S_MS/routes`. Run the following code to calculate Unified Surrogate Metric (S-MS).
-
-`python ./S_MS/create_camera_angle.py`
-
-`python ./S_MS/evaluate_camera_position.py`
-
-`python ./S_MS/evaluate_lidar_position.py`
