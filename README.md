@@ -4,4 +4,4 @@ Robust and reliable Simultaneous Localization and Mapping (SLAM) systems are cru
 - To improve the robustness of SLAM in dynamic environments, we propose a novel generative in-painting method for dynamic objects.
 - We propose a novel assessment metric based on frame drop rates to identify the most reliable SLAM systems.
 - Centered around the theme of robust and reliable SLAM, we establish a systematic data generation platform in CALRA to synthesize RGB data under diverse conditions. Extensive experiments demonstrate that our framework can evaluate and optimize the performance of SLAM systems.
-## Dependency
+## CARLA Synthetic Dataset Generation Guide
